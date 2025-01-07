@@ -1,0 +1,55 @@
+---
+// Import section components
+import MainLayout from "@/layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
+import FeaturesStatsAlt from "@components/sections/features/FeaturesStatsAlt.astro";
+import ContactSection from "@components/sections/misc/ContactSection.astro";
+import serviceImage from "../../images/insights/insight-1.avif";
+---
+
+<MainLayout>
+<div class="px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
+    <div class="flex items-center justify-between flex-col md:flex-row space-y-4 sm:space-y-0">
+      <div class="" id="fadeInUp">
+        <h1 class="block text-4xl mb-7 font-bold tracking-tighter text-neutral-800 dark:text-neutral-200 sm:text-5xl md:text-6xl lg:text-7xl">
+          Service Title
+        </h1>
+        <p class="mb-8 max-w-prose text-pretty font-light text-neutral-700 dark:text-neutral-300 sm:text-xl">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis laudantium quidem dolor voluptates natus, quod amet. Ut numquam, molestiae repudiandae mollitia voluptate, atque vel dolores ex error debitis, deserunt soluta.
+        </p>
+        <PrimaryCTA title="Contact us" url="/contact" noArrow={false} />
+      </div>
+      <div>
+        <Image
+          id="fadeInMoveRight"
+          src={serviceImage}
+          class="w-[600px] rounded-2xl"
+          alt={"service"}
+          format={"avif"}
+          loading={"eager"}
+        />
+      </div>
+    </div>
+</div>
+<div class="px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full bg-black/5 dark:bg-white/5">
+    <div class="flex items-center justify-between flex-col md:flex-row space-y-4 sm:space-y-0">
+        <FeaturesStatsAlt
+        title="Service Features"
+        subTitle="Transform your ideas into tangible results with ScrewFast tools. Whether you're starting with a sketch on a napkin or diving into a comprehensive construction project, our tools are engineered to help you build with confidence."
+        benefits={[
+            "Feature No.1",
+            "Feature No.2",
+            "Feature No.3",
+            "Feature No.4",
+            "Feature No.5",
+            ]}
+        />
+    </div>
+    <div class="text-center">
+        <h1 class="text-2xl font-bold text-neutral-700 dark:text-neutral-400">Only For</h1>
+        <h1 class="text-8xl font-bold m-6 text-newTheme-100 dark:text-newTheme-200">49<span class="text-3xl">.99</span></h1>
+    </div>
+</div>
+<ContactSection />
+</MainLayout>
