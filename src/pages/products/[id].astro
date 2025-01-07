@@ -3,6 +3,7 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import ProductTabBtn from "@components/ui/buttons/ProductTabBtn.astro";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
+import ContactSection from "@components/sections/misc/ContactSection.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import { SITE } from "@data/constants";
@@ -41,26 +42,26 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
   <section
     class="mx-auto flex max-w-[85rem] flex-col px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
   >
-    <div>
-      <p
-        id="fadeText"
-        class="mb-8 max-w-prose text-pretty font-light text-neutral-700 dark:text-neutral-300 sm:text-xl"
-      >
-        {product.data.main.content}
-      </p>
-    </div>
     <div
-      class="flex flex-col items-center justify-between space-y-4 sm:flex-row sm:space-y-0"
+      class="flex flex-col items-center justify-between space-y-4 sm:space-y-0"
     >
-      <div id="fadeInUp">
+      <div class="text-center" id="fadeInUp">
         <h1
-          class="block text-4xl font-bold tracking-tighter text-neutral-800 dark:text-neutral-200 sm:text-5xl md:text-6xl lg:text-7xl"
+          class="block text-4xl mb-7 font-bold tracking-tighter text-neutral-800 dark:text-neutral-200 sm:text-5xl md:text-6xl lg:text-7xl"
         >
           {product.data.title}
         </h1>
-        <p class="text-lg text-neutral-600 dark:text-neutral-400">
+        <p class="text-lg text-neutral-600 dark:text-neutral-400 font-bold mb-2">
           {product.data.description}
         </p>
+        <div>
+          <p
+            id="fadeText"
+            class="mb-8 max-w-prose text-pretty font-light text-neutral-700 dark:text-neutral-300 sm:text-xl"
+          >
+            {product.data.main.content}
+          </p>
+        </div>
       </div>
       <div>
         <Image
@@ -75,7 +76,7 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
     </div>
   </section>
 
-  <div class="mx-auto max-w-[85rem] px-4 pt-10 sm:px-6 lg:px-8 lg:pt-14">
+  <div class="mx-auto max-w-[85rem] px-4 pt-10 sm:px-6 lg:px-8 lg:pt-14 bg-black/5 dark:bg-white/5">
     <nav
       class="mx-auto grid max-w-6xl gap-y-px sm:flex sm:gap-x-4 sm:gap-y-0"
       aria-label="Tabs"
@@ -108,12 +109,7 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
               >
                 {product.data.longDescription.subTitle}
               </p>
-              <p class="mt-5">
-                <PrimaryCTA
-                  title={product.data.longDescription.btnTitle}
-                  url={product.data.longDescription.btnURL}
-                />
-              </p>
+              
             </div>
 
             <div class="space-y-6 lg:space-y-10">
@@ -249,6 +245,8 @@ const pageTitle: string = `${product.data.title} | ${SITE.title}`;
       </div>
     </div>
   </div>
+
+  <ContactSection />
 </MainLayout>
 
 <script>
