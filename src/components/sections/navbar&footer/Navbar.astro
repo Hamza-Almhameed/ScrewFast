@@ -7,6 +7,7 @@ import enStrings from "@utils/navigation.ts";
 import frStrings from "@utils/fr/navigation.ts";
 import LanguagePicker from "@components/ui/LanguagePicker.astro";
 import logo from "../../../images/blue_logo.png";
+import logoDark from "../../../images/dark_logo.png";
 import Image from "astro/components/Image.astro";
 
 // Select the correct translation based on the page's lang prop:
@@ -24,15 +25,29 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
     aria-label="Global"
   >
     <div class="flex items-center justify-between">
-      <!-- Brand logo -->
+      <!-- Brand logo (light theme) -->
       <a
-        class="flex-none rounded-lg text-xl font-bold outline-none ring-zinc-500 focus-visible:ring dark:ring-zinc-200 dark:focus:outline-none"
+        class="flex-none rounded-lg text-xl font-bold outline-none ring-zinc-500 focus-visible:ring dark:ring-zinc-200 dark:focus:outline-none dark:hidden"
         href={homeUrl}
         aria-label="Brand"
       >
         <Image
         src={logo}
         alt="logo"
+        width={'120'}
+        height={'120'}
+        format="png"
+      />
+      </a>
+      <!-- Brand logo (dark theme) -->
+      <a
+        class="flex-none rounded-lg text-xl font-bold outline-none ring-zinc-500 focus-visible:ring dark:ring-zinc-200 dark:focus:outline-none hidden dark:block"
+        href={homeUrl}
+        aria-label="Brand"
+      >
+        <Image
+        src={logoDark}
+        alt="logoDark"
         width={'120'}
         height={'120'}
         format="png"
