@@ -10,6 +10,7 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
   site: "https://Hamza-Almhameed.github.io/ScrewFast",
+  base: '/ScrewFast/',
   image: {
     domains: ["images.unsplash.com"],
   },
