@@ -1,28 +1,28 @@
 // An array of links for navigation bar
 const navBarLinks = [
-  { name: "Home", url: "/" },
-  { name: "Products", url: "/products" },
-  { name: "Services", url: "/services" },
-  { name: "Blog", url: "/blog" },
-  { name: "Contact", url: "/contact" },
+  { name: "Home", url: "/ScrewFast/" },
+  { name: "Products", url: "/ScrewFast/products" },
+  { name: "Services", url: "/ScrewFast/services" },
+  { name: "Blog", url: "/ScrewFast/blog" },
+  { name: "Contact", url: "/ScrewFast/contact" },
 ];
 // An array of links for footer
 const footerLinks = [
   {
     section: "Ecosystem",
     links: [
-      { name: "Documentation", url: "/welcome-to-docs/" },
-      { name: "Tools & Equipment", url: "/products" },
-      { name: "Construction Services", url: "/services" },
+      { name: "Documentation", url: "/ScrewFast/welcome-to-docs/" },
+      { name: "Tools & Equipment", url: "/ScrewFast/products" },
+      { name: "Construction Services", url: "/ScrewFast/services" },
     ],
   },
   {
     section: "Company",
     links: [
-      { name: "About us", url: "#" },
-      { name: "Blog", url: "/blog" },
-      { name: "Careers", url: "#" },
-      { name: "Customers", url: "#" },
+      { name: "About us", url: "/ScrewFast/" },
+      { name: "Blog", url: "/ScrewFast/blog" },
+      { name: "Careers", url: "/ScrewFast/" },
+      { name: "Customers", url: "/ScrewFast/" },
     ],
   },
 ];
